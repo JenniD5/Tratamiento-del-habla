@@ -15,14 +15,6 @@ time_Buho=np.linspace(start=0, stop=len(ondaconvertidaBuho)/framerateBuho, num=l
 print(time_Buho[:10])
 
 
-#grafica Buho
-#plt.title('buho')
-#plt.xlabel('tiempo s')
-#plt.ylabel('amplitud')
-#plt.plot(time_Buho, framerateBuho, label='Buho')
-#plt.legend()
-#plt.show()
-
 
 #audio 2
 print('sonido de pajaritos')
@@ -37,22 +29,14 @@ time_Pajarito=np.linspace(start=0, stop=len(ondaconvertidaPajarito)/frameratePaj
 print(time_Pajarito[:10])
 
 
-#grafica pajarito
-#plt.title('pajaritos')
-#plt.xlabel('tiempo s')
-#plt.ylabel('amplitud')
-#plt.plot(time_Pajarito, frameratePajarito, label='Pajaritos')
-#plt.legend()
-#plt.show()
-
 
 plt.title('buho vs pajarito')
 plt.xlabel('tiempo s')
 plt.ylabel('amplitud')
 
 #graficar juntos
-plt.plot(time_Buho,framerateBuho, label='buho')
-plt.plot(time_Pajarito,frameratePajarito, label='pajarito', alpha=0.5)
+plt.plot(time_Buho,ondaconvertidaBuho, label='buho')
+plt.plot(time_Pajarito,ondaconvertidaPajarito, label='pajarito', alpha=0.5)
 
 plt.legend()
 plt.show()
